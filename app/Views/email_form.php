@@ -151,18 +151,19 @@
 </head>
 
 <body>
-    <form action="/" class="decor">
+    <form method="post" action="<?= base_url('Email/send'); ?>" class="decor">
         <div class="form-left-decoration"></div>
         <div class="form-right-decoration"></div>
         <div class="circle"></div>
         <div class="form-inner">
-            <h1>Contact us</h1>
-            <input type="text" placeholder="Username">
-            <input type="email" placeholder="Email">
-            <textarea placeholder="Message..." rows="5"></textarea>
+            <h1>Email Sender</h1>
+            <input type="email" name="sender_email" placeholder="Sender email">
+            <input type="email" name="receiver_email" placeholder="Receiver email">
+            <textarea name="message" placeholder="Message..." rows="5"></textarea>
             <button type="submit" href="/">Submit</button>
         </div>
     </form>
 </body>
+
 
 </html>
