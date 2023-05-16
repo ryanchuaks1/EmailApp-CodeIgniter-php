@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-class Email extends BaseController
+class EmailController extends BaseController
 {
     public function send()
     {
@@ -11,10 +11,10 @@ class Email extends BaseController
         $receiverEmail = $this->request->getPost('receiver_email');
         $message = $this->request->getPost('message');
 
+        $model = model(EmailModel::class);
+
         // Insert the data into the database
-        $db = db_connect();
-        $builder = $db->table('emails');
-        $builder->insert([
+        $model->save([
             'sender_email' => $senderEmail,
             'receiver_email' => $receiverEmail,
             'message' => $message,
@@ -22,5 +22,9 @@ class Email extends BaseController
 
         // Redirect back to the form
         return redirect()->to('/');
+    }
+
+    public function index() {
+
     }
 }

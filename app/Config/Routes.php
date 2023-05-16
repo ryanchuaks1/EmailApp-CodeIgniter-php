@@ -29,8 +29,12 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
+use App\Controllers\EmailController;
+
 $routes->get('/', 'Home::index');
-$routes->post('Email/send', 'Email::send');
+$routes->get('/inbox', 'Home::inbox');
+$routes->post('/send', 'Emailcontroller::send');
+// $routes->post('/send', [EmailController::class, 'send']);
 
 /*
  * --------------------------------------------------------------------

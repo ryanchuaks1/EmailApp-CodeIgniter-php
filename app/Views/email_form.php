@@ -147,11 +147,15 @@
             width: 60%;
         }
     }
+    .link {
+        padding-left:5%;
+    }
+
     </style>
 </head>
 
 <body>
-    <form method="post" action="<?= base_url('Email/send'); ?>" class="decor">
+    <form method="post" action="<?= base_url('/send'); ?>" class="decor">
         <div class="form-left-decoration"></div>
         <div class="form-right-decoration"></div>
         <div class="circle"></div>
@@ -162,6 +166,7 @@
             <textarea name="message" placeholder="Message..." rows="5"></textarea>
             <button type="submit" href="/">Submit</button>
         </div>
+    <a class="link" type="submit" href="/inbox">Go to inbox</a>
     </form>
 </body>
 

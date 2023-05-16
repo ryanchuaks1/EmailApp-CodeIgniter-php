@@ -28,8 +28,8 @@ class Database extends Config
         'DSN'      => '',
         'hostname' => '127.0.0.1',
         'username' => 'root',
-        'password' => '',
-        'database' => 'emailphp',
+        'password' => 'password',
+        'database' => 'mysql',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,
@@ -44,6 +44,14 @@ class Database extends Config
         'port'     => 3306,
     ];
 
+    // CREATE TABLE email (
+    //     id INT(11) NOT NULL PRIMARY KEY,
+    //     sender_email VARCHAR(255) NOT NULL,
+    //     receiver_email VARCHAR(255) NOT NULL,
+    //     message TEXT NOT NULL,
+    //     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    //   );
+    
     /**
      * This database connection is used when
      * running PHPUnit database tests.

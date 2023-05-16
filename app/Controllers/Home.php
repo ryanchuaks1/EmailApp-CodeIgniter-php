@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controllers;
+use App\Models\EmailModel;
 
 class Home extends BaseController
 {
@@ -8,4 +9,12 @@ class Home extends BaseController
     {
         return view('email_form');
     }
+    public function inbox()
+    {
+        $model = model(EmailModel::class);
+        $data['email'] = $model->findAll();
+        return view('email_inbox', $data);
+    }
+    
+    
 }
