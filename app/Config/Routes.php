@@ -34,6 +34,10 @@ use App\Controllers\EmailController;
 $routes->get('/', 'Home::index');
 $routes->get('/inbox', 'Home::inbox');
 $routes->post('/send', 'Emailcontroller::send');
+$routes->get('email/update/(:num)', 'EmailController::update/$1');
+$routes->get('email/delete/(:num)', 'EmailController::delete/$1');
+$routes->match(['get', 'post'], 'email/update/(:num)', 'EmailController::update/$1');
+
 // $routes->post('/send', [EmailController::class, 'send']);
 
 /*

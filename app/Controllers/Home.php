@@ -13,6 +13,7 @@ class Home extends BaseController
     {
         $model = model(EmailModel::class);
         $data['email'] = $model->findAll();
+        $data['editId'] = 0;
         return view('email_inbox', $data);
     }
     
