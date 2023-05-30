@@ -16,6 +16,8 @@ class Home extends BaseController
         $data['editId'] = 0;
         return view('email_inbox', $data);
     }
-    
-    
+    public function luckynumber()
+    {
+        return view('lucky_number');
+    }
 }

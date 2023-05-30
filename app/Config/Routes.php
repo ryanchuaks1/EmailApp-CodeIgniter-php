@@ -33,6 +33,8 @@ use App\Controllers\EmailController;
 
 $routes->get('/', 'Home::index');
 $routes->get('/inbox', 'Home::inbox');
+$routes->get('/luckynumber', 'NumberController::index');
+
 $routes->post('/send', 'Emailcontroller::send');
 $routes->get('email/update/(:num)', 'EmailController::update/$1');
 $routes->get('email/delete/(:num)', 'EmailController::delete/$1');
