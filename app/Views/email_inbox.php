@@ -53,6 +53,7 @@
                 <th>Sender</th>
                 <th>Receiver</th>
                 <th>Message</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -61,6 +62,10 @@
                 <td><?php echo $row['sender_email']; ?></td>
                 <td><?php echo $row['receiver_email']; ?></td>
                 <td><?php echo $row['message']; ?></td>
+                <td>
+                    <a href="<?php echo base_url('email/update/' . $row['id']); ?>">Update</a>
+                    <a href="<?php echo base_url('email/delete/' . $row['id']); ?>">Delete</a>
+                </td>
             </tr>
             <?php } ?>
             <tr>
@@ -68,7 +73,7 @@
             </tr>
         </tbody>
     </table>
-
 </body>
+
 
 </html>
