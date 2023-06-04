@@ -166,7 +166,7 @@
             <textarea name="message" placeholder="Message..." rows="5"></textarea>
             <button type="submit" href="/">Submit</button>
         </div>
-    <a class="link" type="submit" href="/inbox">Go to inbox</a>
+    <a class="link" type="submit" href="<?= base_url('/inbox'); ?>">Go to inbox</a>
     </form>
 </body>
 

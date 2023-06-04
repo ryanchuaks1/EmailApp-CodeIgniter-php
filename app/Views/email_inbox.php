@@ -69,7 +69,7 @@
             </tr>
             <?php } ?>
             <tr>
-                <td><a type="submit" href="/">Back</a></td>
+                <td><a type="submit" href="<?= base_url('/'); ?>">Back</a></td>
             </tr>
         </tbody>
     </table>

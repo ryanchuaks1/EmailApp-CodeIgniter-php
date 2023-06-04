@@ -35,7 +35,7 @@ $routes->get('/', 'Home::index');
 $routes->get('/inbox', 'Home::inbox');
 $routes->get('/luckynumber', 'NumberController::index');
 
-$routes->post('/send', 'Emailcontroller::send');
+$routes->post('/send', 'EmailController::send');
 $routes->get('email/update/(:num)', 'EmailController::update/$1');
 $routes->get('email/delete/(:num)', 'EmailController::delete/$1');
 $routes->match(['get', 'post'], 'email/update/(:num)', 'EmailController::update/$1');
